@@ -1,7 +1,12 @@
 package com.app.reforcandoalfa.model;
 
+import com.app.reforcandoalfa.config.ConfiguracaoFirebase;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.Exclude;
+
 public class Professor {
 
+    private String idUsuario;
     private String nome;
     private String sobrenome;
     private String nomeCompleto;
@@ -11,6 +16,22 @@ public class Professor {
     private String senhaConf;
 
     public Professor() {
+    }
+
+    public void salvar(){
+        DatabaseReference firebase = ConfiguracaoFirebase.getFirebaseDatabase();
+        firebase.child("professores")
+                .child(this.idUsuario)
+                .setValue(this);
+    }
+
+    @Exclude
+    public String getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(String idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
     public String getNome() {
@@ -29,8 +50,8 @@ public class Professor {
         this.sobrenome = sobrenome;
     }
 
-    public void getnomeCompleto() {
-        this.nomeCompleto = this.nome + " " + this.sobrenome;
+    public String getnomeCompleto() {
+        return this.nomeCompleto = this.nome + " " + this.sobrenome;
     }
 
 
@@ -50,6 +71,7 @@ public class Professor {
         this.celular = celular;
     }
 
+    @Exclude
     public String getSenha() {
         return senha;
     }
@@ -58,6 +80,7 @@ public class Professor {
         this.senha = senha;
     }
 
+    @Exclude
     public String getSenhaConf() {
         return senhaConf;
     }

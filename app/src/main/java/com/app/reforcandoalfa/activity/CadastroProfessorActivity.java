@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.app.reforcandoalfa.R;
 import com.app.reforcandoalfa.config.ConfiguracaoFirebase;
+import com.app.reforcandoalfa.helper.base64Custom;
 import com.app.reforcandoalfa.model.Professor;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -76,6 +77,9 @@ public class CadastroProfessorActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
+                            String idUsuario = base64Custom.codificarBase64(professor.getEmail());
+                            professor.setIdUsuario(idUsuario);
+                            professor.salvar();
                             finish();
                         }else {
                             String excecao;
