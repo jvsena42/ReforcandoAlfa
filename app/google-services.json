@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "552993079783",
+    "firebase_url": "https://reforcando-alfa.firebaseio.com",
+    "project_id": "reforcando-alfa",
+    "storage_bucket": "reforcando-alfa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:552993079783:android:01293ce68aed8a1e",
+        "android_client_info": {
+          "package_name": "com.app.reforcandoalfa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "552993079783-c60nlm5cj3bqhbr7cf1ppj176fadh6fk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.reforcandoalfa",
+            "certificate_hash": "8a509bdb44607eb9074e9125e0e964d8dcdc64cf"
+          }
+        },
+        {
+          "client_id": "552993079783-7ktvlf9rte7rbh43um6lgc1hj6c67so7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaWnGb7cR_HlKp5IG7CqnwDcBO80NBu84"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "552993079783-7ktvlf9rte7rbh43um6lgc1hj6c67so7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
